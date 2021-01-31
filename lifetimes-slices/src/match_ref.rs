@@ -58,7 +58,7 @@ fn print_person_on_birthday_borrow(mut person: Person) {
         Some(age) => {
             println!("Age is {}", age);
             *age += 1;
-        },
+        }
         None => println!("Age is not provided"),
     }
     println!("Full Person value: {:?}", person);
@@ -74,13 +74,13 @@ fn print_person_on_birthday_ref(mut person: Person) {
         Some(ref mut age) => {
             println!("Age is {}", age);
             *age += 1;
-        },
+        }
         None => println!("Age is not provided"),
     }
     println!("Full Person value: {:?}", person);
 }
 
-pub fn run () {
+pub fn run() {
     println!("This is Example 1!");
 
     print_person(Person {
@@ -98,12 +98,12 @@ pub fn run () {
         age: None,
     });
 
-    print_person_on_birthday_borrow(Person{
+    print_person_on_birthday_borrow(Person {
         name: Some(String::from("Bob")),
         age: Some(31),
     });
 
-    print_person_on_birthday_ref(Person{
+    print_person_on_birthday_ref(Person {
         name: Some(String::from("Bob")),
         age: Some(31),
     });
